@@ -46,11 +46,11 @@ Why do we need to test our code? Consider the case of Geoffrey Chang, a research
 
 > We wish to retract our research article ... and both of our Reports ... an in-house data reduction program introduced a change in sign ... converted the anomalous pairs (I+ and I-) to (F- and F+)...
 
-Chang, G., Roth, C.B., Reyes, C.L., Pornillos, O., Yen-Ju, C., Chen, A.P. (2006) Retraction. Science 22 December 2006: Vol. 314 no. 5807 p. 1875  DOI: [10.1126/science.314.587.1875b](http://www.sciencemag.org/content/314/5807/1875.2.long)
+Chang, G., Roth, C.B., Reyes, C.L., Pornillos, O., Yen-Ju, C., Chen, A.P. (2006) Retraction. ScienceÂ 22 December 2006:Â Vol. 314Â no. 5807Â p. 1875Â  DOI:Â [10.1126/science.314.587.1875b](http://www.sciencemag.org/content/314/5807/1875.2.long)
 
 It was a group of Swiss researchers that first raised concerns about the data. The data was flawed due to a bug in a data analysis program causing two columns to be flipped.
 
-> Swiss researchers published a paper in Nature that cast serious doubt on a protein structure Chang's group had described in a 2001 Science paper.
+> Swiss researchers published a paper inÂ NatureÂ that cast serious doubt on a protein structure Chang's group had described in a 2001Â ScienceÂ paper.
 
 > Chang was horrified to discover that a homemade data-analysis program had flipped two columns of data
 
@@ -274,6 +274,11 @@ def test_count_frequency():
 Putting our test code into functions not only is more modular, it allows us to run our tests using a unit test framework.
 
 The Python unit test framework, pytest, has a test runner, `py.test`, which looks for functions with the prefix `test_` and runs these. It records which tests succeeded and which failed, and prints reports on these.
+
+If py.test cannot be found on your system, then install it
+```
+sudo apt install python-pytest
+```
 
 If we run `test_counts.py` using `py.test`, we get a report that shows our test successfully passed, as `py.test` prints a dot for each test function that it finds and runs, and which succeeds.
 
@@ -700,7 +705,7 @@ Unit test frameworks for other languages provide similar functions:
 * CPPUnit for C++: `CPPUNIT_ASSERT_DOUBLES_EQUAL(expected, actual, delta)`
 * googletest for C++: `ASSERT_NEAR(val1, val2, abs_error)`
 * FRUIT for Fortran: `subroutine assert_eq_double_in_range_(var1, var2, delta, message)`
-* JUnit for Java: `org.junit.Assert.assertEquals(double expected, double actual, double delta)`
+* JUnit for Java: `org.junit.Assert.assertEquals(doubleÂ expected, doubleÂ actual, doubleÂ delta)`
 * testthat for R: 
   - `expect_equal(actual, expected, tolerance=DELTA)` - absolute error within `DELTA`
   - `expect_equal(actual, expected, scale=expected, tolerance=DELTA)` - relative error within `DELTA`
@@ -861,7 +866,7 @@ The consultant then worked through BASIL tutorials that invoked FABBER, so they 
 
 The consultant used a shell script-based regression test framework that checked for the existence of output files, and compared expected files to actual files using the `diff` command.
 
-One reason for the consultant using a regression test framework is that they were not a bioinformatician. There was no way they could assess the scientific correctness of FABBER’s outputs, but the regression test framework meant that they could detect whether or not they had changed its behaviour.
+One reason for the consultant using a regression test framework is that they were not a bioinformatician. There was no way they could assess the scientific correctness of FABBERÂ’s outputs, but the regression test framework meant that they could detect whether or not they had changed its behaviour.
 
 ### TPLS (Two-phase Level Set)
 
