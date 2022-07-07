@@ -29,15 +29,15 @@ If you want to run the examples in this guide yourself, then you will need Pytho
 To get these examples, you can download the ZIP file of this repository by clicking on the Download ZIP button. Or, if know how to use Git, clone this repository, for example:
  
 ```
-$ git clone http://github.com/softwaresaved/automated_testing.git
+git clone http://github.com/softwaresaved/automated_testing.git
 ```
 
 If using Linux/Unix, then, once you have the repository, we need to set permissions on a couple of scripts so they can be executed directly, and add the current directory to our PATH environment variable. Run the following:
 
 ```
-$ chmod +x count_frequency
-$ chmod +x test_count_frequency.sh
-$ export PATH=.:$PATH
+chmod +x count_frequency
+chmod +x test_count_frequency.sh
+export PATH=.:$PATH
 ```
 
 ## Why test our code?
